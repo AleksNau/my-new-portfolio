@@ -5,6 +5,7 @@ import Head from "next/head";
 import Image from "next/image";
 import profilePic from '../../public/images/profile/developer-pic-2.jpg'
 import {useInView, useMotionValue, useSpring} from "framer-motion";
+import Skills from "@/components/Skills";
 
 
 const AnimatedNumbers = ({value}) => {
@@ -12,7 +13,7 @@ const AnimatedNumbers = ({value}) => {
 
     const motionValue = useMotionValue(0);
     const springValue = useSpring(motionValue,{duration: 3000});
-    const isInVeaw = useInView(ref)
+    const isInVeaw = useInView(ref,{once:true})
 
     useEffect(() => {
         if(isInVeaw) {
@@ -74,19 +75,20 @@ const About = () => {
 
                         <div className={'flex flex-col items-end justify-center'}>
                             <span className={'inline-block text-7xl font-bold'}>
-                            50+
+                            <AnimatedNumbers value={50}/>+
                             </span>
                             <h2 className={'text-xl font-medium capitalize text-dark/75'}>satisfied clients</h2>
                         </div>
 
                         <div className={'flex flex-col items-end justify-center'}>
                             <span className={'inline-block text-7xl font-bold'}>
-                            4+
+                            <AnimatedNumbers value={4}/>+
                             </span>
                             <h2 className={'text-xl font-medium capitalize text-dark/75'}>years exporianses</h2>
                         </div>
                     </div>
                 </div>
+                    <Skills/>
                 </Layout>
             </main>
         </>
