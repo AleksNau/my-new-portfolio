@@ -8,7 +8,7 @@ import atricle1 from '../../public/images/articles/create loading screen in reac
 import {motion, useMotionValue} from "framer-motion";
 
 const FramerImage = motion(Image)
-
+//не работает отслеживание курсора
 const MovingImg = ({img, title,link}) => {
     const x = useMotionValue(0);
     const y = useMotionValue(0);
