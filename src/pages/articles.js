@@ -33,35 +33,37 @@ const MovingImg = ({img, title,link}) => {
 }
 const Article = ({img, title,date,link}) => {
   return(
-      <li className={'relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light text-dark first:mt-0 border border-solid border-dark border-r-4 border-b-4'}>
+      <li className={'relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light text-dark first:mt-0 border border-solid border-dark border-r-4 border-b-4 dark:border-light dark:bg-dark'}>
           <Link href={'/'} target={'_blank'}>
-            <h2 className={'capitalize text-xl font-semibold hover:underline'}>{title}</h2>
+            <h2 className={'capitalize text-xl font-semibold hover:underline dark:text-light'}>{title}</h2>
           </Link>
           <MovingImg title={title} img={img} link={link}/>
-          <span className={'text-primary font-semibold ml-4'}>{date}</span>
+          <span className={'text-primary font-semibold ml-4 dark:text-primaryDark'}>{date}</span>
       </li>
   )
 }
 
 const FeaturedArticle = ({img,title,time,summury,link}) => {
   return(
-      <li className={'col-span-1 w-full p-4 bg-light border border-solid border-dark rounded-2xl relative'}>
-          <div className={'absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark rounded-br-3xl'}/>
+      <li className={'col-span-1 w-full p-4 bg-light border border-solid border-dark rounded-2xl relative dark:bg-dark dark:text-light dark:border-light'}>
+          <div className={'absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark rounded-br-3xl dark:bg-light'}/>
 
           <Link href={link} target={'_blank'} className={'w-full inline-block cursor-pointer overflow-hidden rounded-lg'}>
               <FramerImage src={img}
                            alt={title}
                            className={'w-full h-auto'}
                            whileHover={{scale:1.05}}
-                           transition={{duration:0.2}}/>
+                           transition={{duration:0.2}}
+                           priority
+                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"/>
           </Link>
           <Link href={link} target={'_blank'}>
-              <h2 className={'capitalize text-2xl font-bold my-2 hover:underline mt-4'}>{title}</h2>
+              <h2 className={'capitalize text-2xl font-bold my-2 hover:underline mt-4 dark:text-light'}>{title}</h2>
           </Link>
-          <p className={'text-sm mb-2'}>
+          <p className={'text-sm mb-2 dark:text-light'}>
               {summury}
           </p>
-          <span className={'text-primary font-semibold '}>{time}</span>
+          <span className={'text-primary font-semibold dark:text-primaryDark'}>{time}</span>
       </li>
   )
 }
@@ -76,7 +78,7 @@ const Articles = () => {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main className={'w-full mb-16 flex items-center justify-center overflow-hidden'}>
+            <main className={'w-full mb-16 flex items-center justify-center overflow-hidden dark:text-light'}>
 <Layout className={'pt-16'}>
     <AnimatedText text={'Change the world'} className={'mb-16'}>
 
