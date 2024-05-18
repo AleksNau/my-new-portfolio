@@ -6,10 +6,11 @@ import Image from "next/image";
 import Link from "next/link";
 import atricle1 from '../../public/images/articles/create loading screen in react js.jpg'
 import {motion, useMotionValue} from "framer-motion";
+import TransitionEffect from "@/components/TransitionEffect";
 
 const FramerImage = motion(Image)
 //не работает отслеживание курсора
-const MovingImg = ({img, title,link}) => {
+const MovingImg = ({img, title, link}) => {
     const x = useMotionValue(0);
     const y = useMotionValue(0);
     const imgRef = useRef(null);
@@ -17,9 +18,11 @@ const MovingImg = ({img, title,link}) => {
     function handleMouse(event) {
         console.log(event.pageX);
     }
+
     function handleMouseLeave(event) {
         console.log(event.pageX);
     }
+
     return (
         <Link
             href={link}
@@ -27,45 +30,47 @@ const MovingImg = ({img, title,link}) => {
             onMouseMove={handleMouse}
             onMouseLeave={handleMouseLeave}>
             <h2 className={'capitalize text-2xl font-bold my-2 hover:underline mt-4 hidden'}>{title}</h2>
-        <Image ref={imgRef} src={img} alt={title} className={'w-96 h-auto hidden absolute rounded-lg'}></Image>
+            <Image ref={imgRef} src={img} alt={title} className={'w-96 h-auto hidden absolute rounded-lg'}/>
         </Link>
     )
 }
-const Article = ({img, title,date,link}) => {
-  return(
-      <li className={'relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light text-dark first:mt-0 border border-solid border-dark border-r-4 border-b-4 dark:border-light dark:bg-dark'}>
-          <Link href={'/'} target={'_blank'}>
-            <h2 className={'capitalize text-xl font-semibold hover:underline dark:text-light'}>{title}</h2>
-          </Link>
-          <MovingImg title={title} img={img} link={link}/>
-          <span className={'text-primary font-semibold ml-4 dark:text-primaryDark'}>{date}</span>
-      </li>
-  )
+const Article = ({img, title, date, link}) => {
+    return (
+        <li className={'relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light text-dark first:mt-0 border border-solid border-dark border-r-4 border-b-4 dark:border-light dark:bg-dark sm:flex-col'}>
+            <Link href={'/'} target={'_blank'}>
+                <h2 className={'capitalize text-xl font-semibold hover:underline dark:text-light'}>{title}</h2>
+            </Link>
+            <MovingImg title={title} img={img} link={link}/>
+            <span className={'text-primary font-semibold pl-4 dark:text-primaryDark sm:self-start sm:pl-0 xs:text-sm'}>{date}</span>
+        </li>
+    )
 }
 
-const FeaturedArticle = ({img,title,time,summury,link}) => {
-  return(
-      <li className={'col-span-1 w-full p-4 bg-light border border-solid border-dark rounded-2xl relative dark:bg-dark dark:text-light dark:border-light'}>
-          <div className={'absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark rounded-br-3xl dark:bg-light'}/>
+const FeaturedArticle = ({img, title, time, summury, link}) => {
+    return (
+        <li className={'col-span-1 w-full p-4 bg-light border border-solid border-dark rounded-2xl relative dark:bg-dark dark:text-light dark:border-light'}>
+            <div
+                className={'absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark rounded-br-3xl dark:bg-light'}/>
 
-          <Link href={link} target={'_blank'} className={'w-full inline-block cursor-pointer overflow-hidden rounded-lg'}>
-              <FramerImage src={img}
-                           alt={title}
-                           className={'w-full h-auto'}
-                           whileHover={{scale:1.05}}
-                           transition={{duration:0.2}}
-                           priority
-                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"/>
-          </Link>
-          <Link href={link} target={'_blank'}>
-              <h2 className={'capitalize text-2xl font-bold my-2 hover:underline mt-4 dark:text-light'}>{title}</h2>
-          </Link>
-          <p className={'text-sm mb-2 dark:text-light'}>
-              {summury}
-          </p>
-          <span className={'text-primary font-semibold dark:text-primaryDark'}>{time}</span>
-      </li>
-  )
+            <Link href={link} target={'_blank'}
+                  className={'w-full inline-block cursor-pointer overflow-hidden rounded-lg'}>
+                <FramerImage src={img}
+                             alt={title}
+                             className={'w-full h-auto'}
+                             whileHover={{scale: 1.05}}
+                             transition={{duration: 0.2}}
+                             priority
+                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"/>
+            </Link>
+            <Link href={link} target={'_blank'}>
+                <h2 className={'capitalize text-2xl font-bold my-2 hover:underline mt-4 dark:text-light xs:text-lg'}>{title}</h2>
+            </Link>
+            <p className={'text-sm mb-2 dark:text-light'}>
+                {summury}
+            </p>
+            <span className={'text-primary font-semibold dark:text-primaryDark'}>{time}</span>
+        </li>
+    )
 }
 
 
@@ -74,27 +79,42 @@ const Articles = () => {
         <>
             <Head>
                 <title>CodeBuks | Articles page</title>
-                <meta name="description" content="Generated by create next app" />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="icon" href="/favicon.ico" />
+                <meta name="description" content="Generated by create next app"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1"/>
+                <link rel="icon" href="/favicon.ico"/>
             </Head>
+            <TransitionEffect/>
             <main className={'w-full mb-16 flex items-center justify-center overflow-hidden dark:text-light'}>
-<Layout className={'pt-16'}>
-    <AnimatedText text={'Change the world'} className={'mb-16'}>
+                <Layout className={'pt-16'}>
+                    <AnimatedText text={'Change the world'} className={'mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl'}>
 
-    </AnimatedText>
-    <ul className={'grid grid-cols-2 gap-16 '}>
-        <FeaturedArticle img={atricle1} time={'9 min read'} title={'Build A Custom Pagination Component In Reactjs From Scratch'} link={'/'} summury={'Learn how to build a custom pagination component in ReactJS from scratch.Follow this step-by-step guide to integrate Pagination component in your ReactJS project.'}/>
-        <FeaturedArticle img={atricle1} time={'9 min read'} title={'Build A Custom Pagination Component In Reactjs From Scratch'} link={'/'} summury={'Learn how to build a custom pagination component in ReactJS from scratch.Follow this step-by-step guide to integrate Pagination component in your ReactJS project.'}/>
+                    </AnimatedText>
+                    <ul className={'grid grid-cols-2 gap-16 lg:gap-8 md:grid-cols-1 md: gap-y-16'}>
+                        <FeaturedArticle img={atricle1} time={'9 min read'}
+                                         title={'Build A Custom Pagination Component In Reactjs From Scratch'}
+                                         link={'/'}
+                                         summury={'Learn how to build a custom pagination component in ReactJS from scratch.Follow this step-by-step guide to integrate Pagination component in your ReactJS project.'}/>
+                        <FeaturedArticle img={atricle1} time={'9 min read'}
+                                         title={'Build A Custom Pagination Component In Reactjs From Scratch'}
+                                         link={'/'}
+                                         summury={'Learn how to build a custom pagination component in ReactJS from scratch.Follow this step-by-step guide to integrate Pagination component in your ReactJS project.'}/>
 
-    </ul>
-    <h2 className={'font-bold text-4xl w-full text-center my-16 mt-32'}>All articles</h2>
-    <Article link={'/'} title={'    Form Validation In Reactjs: Build A Reusable Custom Hook For Inputs And Error Handling'} img={atricle1} date={'March 3, 2024'}/>
-    <Article link={'/'} title={'    Form Validation In Reactjs: Build A Reusable Custom Hook For Inputs And Error Handling'} img={atricle1} date={'March 3, 2024'}/>
-    <Article link={'/'} title={'    Form Validation In Reactjs: Build A Reusable Custom Hook For Inputs And Error Handling'} img={atricle1} date={'March 3, 2024'}/>
-    <Article link={'/'} title={'    Form Validation In Reactjs: Build A Reusable Custom Hook For Inputs And Error Handling'} img={atricle1} date={'March 3, 2024'}/>
+                    </ul>
+                    <h2 className={'font-bold text-4xl w-full text-center my-16 mt-32'}>All articles</h2>
+                    <Article link={'/'}
+                             title={'    Form Validation In Reactjs: Build A Reusable Custom Hook For Inputs And Error Handling'}
+                             img={atricle1} date={'March 3, 2024'}/>
+                    <Article link={'/'}
+                             title={'    Form Validation In Reactjs: Build A Reusable Custom Hook For Inputs And Error Handling'}
+                             img={atricle1} date={'March 3, 2024'}/>
+                    <Article link={'/'}
+                             title={'    Form Validation In Reactjs: Build A Reusable Custom Hook For Inputs And Error Handling'}
+                             img={atricle1} date={'March 3, 2024'}/>
+                    <Article link={'/'}
+                             title={'    Form Validation In Reactjs: Build A Reusable Custom Hook For Inputs And Error Handling'}
+                             img={atricle1} date={'March 3, 2024'}/>
 
-</Layout>
+                </Layout>
             </main>
         </>
     );
