@@ -81,19 +81,19 @@ const Projects = () => {
                                   className={'mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl'}/>
                     <div className={'grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0'}>
                         <div className={'col-span-12'}>
-                            <FeaturedProject link={'/'} type={'Featured Project'} title={'Crypto Screener Application'}
-                                             github={'/'} img={project1}
-                                             summury={'A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts.\n' +
-                                                 '                            It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your\n' +
-                                                 '                            local currency.'}/>
+                            <FeaturedProject link={'https://www.tablefun.ru/'} type={'Featured Project'} title={'Настолки FUN'}
+                                             github={'https://github.com/AleksNau/next-blog'} img={project1}
+                                             summury={'Блог о настольных играх.\n' +
+                                                 '                            Сделан на NextJs с использованием технологии SSR\n' +
+                                                 '                            Реализована авторизация, добавление постов, подключена БД'}/>
                         </div>
                         <div className={'col-span-6 sm:col-span-12'}>
-                            <Project link={'/'} type={'Featured Project'} title={'Crypto Screener Application'}
-                                     github={'/'} img={project1}/>
+                            <Project link={'https://www.tablefun.ru/'} type={'Featured Project'} title={'Настолки FUN'}
+                                     github={'https://github.com/AleksNau/next-blog'} img={project1}/>
                         </div>
                         <div className={'col-span-6 sm:col-span-12'}>
-                            <Project link={'/'} type={'Featured Project'} title={'Crypto Screener Application'}
-                                     github={'/'} img={project1}/>
+                            <Project link={'/'} type={'Featured Project'} title={'Портфолио сайт'}
+                                     github={'https://github.com/AleksNau/my-new-portfolio'} img={project1}/>
 
                         </div>
                         <div className={'col-span-6 sm:col-span-12'}>
