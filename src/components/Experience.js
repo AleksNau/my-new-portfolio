@@ -41,45 +41,26 @@ const Experience = () => {
 
                 <ul className={'w-full flex flex-col items-start justify-between ml-4 xs:ml-2'}>
                     <Details
-                        position={"Software Engineer"}
-                        company={'Google'}
+                        position={"Менеджер по сопровождению ИС"}
+                        company={'ООО Системы документооборота'}
                         companyLink={'https://www.google.com/'}
-                        adress={'Mountain View, CA'}
-                        time={'2022-Present'}
-                        work={'Worked on a team responsible for developing new features for Google\'s\n' +
-                            '                    search engine, including improving the accuracy and relevance of search results and\n' +
-                            '                    developing new tools for data analysis and visualization.'}
+                        adress={'Москва'}
+                        time={'2022-2023'}
+                        work={'Работа с крупной системой документооборота\n' +
+                            '                    опеределение требований, постановка задач\n' +
+                            '                    презентация фич клиенту'}
                     />
                     <Details
-                        position={"Software Engineer"}
-                        company={'Google'}
+                        position={"Техник"}
+                        company={'Суприм'}
                         companyLink={'https://www.google.com/'}
-                        adress={'Mountain View, CA'}
+                        adress={'Москва'}
                         time={'2022-Present'}
-                        work={'Worked on a team responsible for developing new features for Google\'s\n' +
-                            '                    search engine, including improving the accuracy and relevance of search results and\n' +
-                            '                    developing new tools for data analysis and visualization.'}
+                        work={'Установка и настройка ОС, прикладных программ\n' +
+                            '                    помощь сотрудникам \n' +
+                            '                    '}
                     />
-                    <Details
-                        position={"Software Engineer"}
-                        company={'Google'}
-                        companyLink={'https://www.google.com/'}
-                        adress={'Mountain View, CA'}
-                        time={'2022-Present'}
-                        work={'Worked on a team responsible for developing new features for Google\'s\n' +
-                            '                    search engine, including improving the accuracy and relevance of search results and\n' +
-                            '                    developing new tools for data analysis and visualization.'}
-                    />
-                    <Details
-                        position={"Software Engineer"}
-                        company={'Google'}
-                        companyLink={'https://www.google.com/'}
-                        adress={'Mountain View, CA'}
-                        time={'2022-Present'}
-                        work={'Worked on a team responsible for developing new features for Google\'s\n' +
-                            '                    search engine, including improving the accuracy and relevance of search results and\n' +
-                            '                    developing new tools for data analysis and visualization.'}
-                    />
+
                 </ul>
             </div>
         </div>

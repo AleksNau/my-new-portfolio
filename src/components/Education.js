@@ -41,30 +41,26 @@ const Education = () => {
 
                 <ul className={'w-full flex flex-col items-start justify-between ml-4 xs:ml-2'}>
                     <Details
-                        type={"Bachelor Of Science In Computer Science"}
-                        place={'Massachusetts Institute Of Technology (MIT)'}
+                        type={"Прикладная информатика(по отрослям)"}
+                        place={'Московский Колледж Градостроительства и Предпренимательства'}
                         time={'2016-2020'}
-                        info={'Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial Intelligence.'}
+                        info={'Информационные системы, Базы данных, Базовое програмирование, Использование прикладных програм для строительства'}
                     />
 
                     <Details
-                        type={"Bachelor Of Science In Computer Science"}
-                        place={'Massachusetts Institute Of Technology (MIT)'}
-                        time={'2016-2020'}
-                        info={'Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial Intelligence.'}
+                        type={"Веб-разработчик"}
+                        place={'Яндекс Практикум'}
+                        time={'2022-2023'}
+                        info={'Курс посвященный веб разработке, БЭМ, HTML, CSS, JavaScript,ReactJS,а так же разворачиванию полноценных веб приложений. '}
                     />
+
                     <Details
-                        type={"Bachelor Of Science In Computer Science"}
-                        place={'Massachusetts Institute Of Technology (MIT)'}
-                        time={'2016-2020'}
-                        info={'Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial Intelligence.'}
+                        type={"Самостоятельное обучение"}
+                        place={'Все ресурсы мира'}
+                        time={'2024-'}
+                        info={'Работа с различными фреймворками: Tailwind, Strapi, NextJS, Prisma,TypeScript'}
                     />
-                    <Details
-                        type={"Bachelor Of Science In Computer Science"}
-                        place={'Massachusetts Institute Of Technology (MIT)'}
-                        time={'2016-2020'}
-                        info={'Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial Intelligence.'}
-                    />
+
                 </ul>
             </div>
         </div>

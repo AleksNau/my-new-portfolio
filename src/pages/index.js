@@ -32,7 +32,7 @@ export default function Home() {
                       />
                   </div>
                   <div className={'w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center'}>
-                      <AnimatedText text={'Turning Vision Into Reality With Code And Design.'} className={'!text-6xl !text-left xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl'}/>
+                      <AnimatedText text={'Создаю проекты,для решения ваших задач'} className={'!text-6xl !text-left xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl'}/>
                       <p className={'my-4 text-base font-medium md:text-sm sm:text-xs'}>Я опытный веб разработчик, превращу ваши фантазии в креативное веб приложение.
                           Тут вы найдете мои последние проекты и статьи, они выолнены на React.js и Next.js.
                       </p>
