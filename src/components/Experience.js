@@ -52,7 +52,7 @@ const Experience = () => {
                     />
                     <Details
                         position={"Техник"}
-                        company={'Суприм'}
+                        company={'ООО Доки'}
                         companyLink={'https://www.google.com/'}
                         adress={'Москва'}
                         time={'2022-Present'}

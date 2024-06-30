@@ -61,7 +61,7 @@ const NavBar = () => {
                    <CustomLink href={'/'} title={'Главная'} className={'mr-4'}/>
                    <CustomLink href={'/about'} title={'Обо мне'} className={'mx-4'}/>
                    <CustomLink href={'/projects'} title={'Проекты'} className={'mx-4'}/>
-                   <CustomLink href={'/articles'} title={'Статьи'} className={'mx-4'}/>
+                   {/*<CustomLink href={'/articles'} title={'Статьи'} className={'mx-4'}/>*/}
                </nav>
 
                <nav className={'flex items-center justify-center flex-wrap'}>

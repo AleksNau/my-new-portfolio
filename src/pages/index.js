@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Layout from "@/components/Layout";
-import profilePic from '../../public/images/profile/developer-pic-1.png'
+import profilePic from '../../public/images/profile/developer-pic-1.jpg'
 import AnimatedText from "@/components/AnimatedText";
 import Link from "next/link";
 import {LinkArrow} from "@/components/Icons";
@@ -25,14 +25,14 @@ export default function Home() {
         <TransitionEffect/>
       <main className={'flex items-center text-dark w-full min-h-screen dark:text-light'}>
           <Layout className={'pt-0 md:p-16 sm:pt-8'}>
-              <div className="flex items-center justify-between w-full lg:flex-col">
+              <div className="flex items-center justify-between w-full lg:flex-col gap-4">
                   <div className={'w-1/2 md:w-full'}>
                       <Image src={profilePic} alt={'CodeBucks'} className={'w-full h-auto lg:hidden md:inline-block md:w-full'} priority
                              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
                       />
                   </div>
                   <div className={'w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center'}>
-                      <AnimatedText text={'Создаю проекты,для решения ваших задач'} className={'!text-6xl !text-left xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl'}/>
+                      <AnimatedText text={'Создаю проекты, для решения ваших задач'} className={'!text-6xl !text-left xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl'}/>
                       <p className={'my-4 text-base font-medium md:text-sm sm:text-xs'}>Я опытный веб разработчик, превращу ваши фантазии в креативное веб приложение.
                           Тут вы найдете мои последние проекты и статьи, они выолнены на React.js и Next.js.
                       </p>
