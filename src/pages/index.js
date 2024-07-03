@@ -37,10 +37,10 @@ export default function Home() {
                           Тут вы найдете мои последние проекты и статьи, они выолнены на React.js и Next.js.
                       </p>
                       <div className={'flex items-center self-start mt-2 lg:self-center'}>
-                          <Link href={'/dummy.pdf'}
+                          <Link href={'https://myresume.ru/resume/vAapfvdGshr/'}
                                 target={'_blank'}
                                 className={'flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-dark dark:text-dark dark:bg-light hover:dark:text-light hover:dark:bg-dark hover:dark:border-light md:p-2 md:px-4 md:text-base'}
-                                download={'resume'}
+
                           >Резюме <LinkArrow className={'w-6 ml-1'}/></Link>
                           <Link className={'ml-4 text-lg font-medium capitalize text-dark underline dark:text-light md:text-base '} href={'mailto:workciti@yandex.ru'} target={'_blank'}>Контакты</Link>
                       </div>
