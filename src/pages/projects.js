@@ -5,7 +5,8 @@ import AnimatedText from "@/components/AnimatedText";
 import Link from "next/link";
 import Image from "next/image";
 import {GithubIcon} from "@/components/Icons";
-import project1 from '../../public/images/projects/crypto-screener-cover-image.jpg'
+import tablefun from '../../public/images/projects/tablefun.jpg'
+import portfolio from '../../public/images/projects/portfolio.jpg'
 import {motion} from "framer-motion";
 import TransitionEffect from "@/components/TransitionEffect";
 
@@ -82,18 +83,18 @@ const Projects = () => {
                     <div className={'grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0'}>
                         <div className={'col-span-12'}>
                             <FeaturedProject link={'https://www.tablefun.ru/'} type={'Featured Project'} title={'Настолки FUN'}
-                                             github={'https://github.com/AleksNau/next-blog'} img={project1}
+                                             github={'https://github.com/AleksNau/next-blog'} img={tablefun}
                                              summury={'Блог о настольных играх.\n' +
                                                  '                            Сделан на NextJs с использованием технологии SSR\n' +
                                                  '                            Реализована авторизация, добавление постов, подключена БД'}/>
                         </div>
                         <div className={'col-span-6 sm:col-span-12'}>
                             <Project link={'https://www.tablefun.ru/'} type={'Featured Project'} title={'Настолки FUN'}
-                                     github={'https://github.com/AleksNau/next-blog'} img={project1}/>
+                                     github={'https://github.com/AleksNau/next-blog'} img={tablefun}/>
                         </div>
                         <div className={'col-span-6 sm:col-span-12'}>
                             <Project link={'/'} type={'Featured Project'} title={'Портфолио сайт'}
-                                     github={'https://github.com/AleksNau/my-new-portfolio'} img={project1}/>
+                                     github={'https://github.com/AleksNau/my-new-portfolio'} img={portfolio}/>
 
                         </div>
 
