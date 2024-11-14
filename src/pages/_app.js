@@ -24,7 +24,7 @@ export default function App({ Component, pageProps }) {
               <meta name="google-site-verification" content="hxo6qQ3moS2yHplomfTEmDOt_qr7ri_QTHHdk14mgBo" />
               <link rel="icon" href="/favicon.ico" />
               <link rel="canonical" href="https://alexnow.pro" />
-              <meta name="keywords" content="Next.js,React,Portfolio,Frontend,Developer" />
+              <meta name="keywords" content="Next.js,React,Portfolio,Frontend,Developer,AlexNow" />
               <meta name="referrer" content="origin-when-cross-origin" />
               <meta name="creator" content="Alex Now" />
 
