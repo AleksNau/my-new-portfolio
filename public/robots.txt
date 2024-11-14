@@ -1,0 +1,3 @@
+User-agent: *
+Host: alexnow.pro
+Sitemap: https://alexnow.pro/sitemap.xml
