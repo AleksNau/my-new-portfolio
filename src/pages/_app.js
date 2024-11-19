@@ -1,7 +1,9 @@
 import '@/styles/globals.css'
 import {Montserrat} from 'next/font/google'
+import Script from 'next/script';
 import Head from "next/head";
 import NavBar from "@/components/NavBar";
+import YandexMetrika from "@/components/YandexMetrika";
 import Footer from "@/components/Footer";
 import {AnimatePresence} from "framer-motion";
 import {useRouter} from "next/router";
@@ -15,7 +17,7 @@ const montserrat = Montserrat ({
 export default function App({ Component, pageProps }) {
     const router = useRouter();
   return (
-      <>
+      <>{}
           <Head>
               <title>AlexNow</title>
               <meta name="description" content="Мой сайт портфолио" />
@@ -27,9 +29,27 @@ export default function App({ Component, pageProps }) {
               <meta name="keywords" content="Next.js,React,Portfolio,Frontend,Developer,AlexNow" />
               <meta name="referrer" content="origin-when-cross-origin" />
               <meta name="creator" content="Alex Now" />
+              <Script id="metrika-counter" strategy="afterInteractive">
+  {`(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+ 
+    ym(98917796, "init", {
+          defer: true,
+          clickmap:true,
+          trackLinks:true,
+          accurateTrackBounce:true,
+          webvisor:true
+    });`
+  }
+</Script>
+<YandexMetrika />
 
           </Head>
           <NavBar/>
+          
           <main className = {`${montserrat.variable} font-mont bg-light w-full min-h-screen dark:bg-dark`}>
               <AnimatePresence mode={'wait'}>
                   <Component key={router.asPath} {...pageProps} />
