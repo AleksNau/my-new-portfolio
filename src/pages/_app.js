@@ -29,7 +29,10 @@ export default function App({ Component, pageProps }) {
               <meta name="keywords" content="Next.js,React,Portfolio,Frontend,Developer,AlexNow" />
               <meta name="referrer" content="origin-when-cross-origin" />
               <meta name="creator" content="Alex Now" />
-<Script type="text/javascript" >
+
+          </Head>
+          <NavBar/>
+          <Script id='yandex-metrika' type="text/javascript" >
   { `(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
    m[i].l=1*new Date();
    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
@@ -46,10 +49,6 @@ export default function App({ Component, pageProps }) {
 </Script>
 <noscript><div><img src="https://mc.yandex.ru/watch/98917796"alt="" /></div></noscript>
 <YandexMetrika />
-
-          </Head>
-          <NavBar/>
-          
           <main className = {`${montserrat.variable} font-mont bg-light w-full min-h-screen dark:bg-dark`}>
               <AnimatePresence mode={'wait'}>
                   <Component key={router.asPath} {...pageProps} />
